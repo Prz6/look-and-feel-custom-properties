@@ -1,0 +1,142 @@
+:root {
+  /* font-size: min(calc(1em + 1vw), 4em); */
+
+/* Kleuren voor fonts */
+  --color-cream: #f0ead2 ;
+  --color-lightgreen: #dde5b6;
+  --color-darkgreen: #adc178;
+  --color-lightbrown: #a98467;
+  --color-darkbrown: #6c584c;
+  --color-lightgray: #e0e0e0;
+/*kleur voor light/dark mode */
+  --bg-root:lightgreen;
+  --clr-root:forestgreen;
+  --brdrclr-root:blue;
+  --navclr-root:lightyellow;
+
+  /*kleuren voor fonts*/
+  --clrfont-root:black;
+}
+
+@media (prefers-color-scheme: dark){
+  :root {
+    --bg-root:forestgreen;
+    --clr-root:black;
+  }
+
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+
+  
+  body {
+    min-height: 100vh;
+  
+    font-family: sans-serif;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: 'kern' 1, 'liga' on, 'dlig' on;
+    line-height: 1.5;
+  
+    display: flex;
+
+    background-color: var(--bg-root);
+    color:var(--clr-root);
+    border-color: var(--brdrclr-root);
+  }
+  
+  body > * {
+    padding: 0.2rem;
+  }
+  
+  aside {
+    max-width: 24rem;
+    background-color:var(--navclr-root);
+    padding: 1rem 1.5rem;
+  }
+  
+  main {
+    padding-left: 1rem;
+  }
+  
+  header {
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    background: var(--color-lightgreen);
+    padding: 0.8rem 1.8rem;
+  
+  }
+  
+  header > h1 {
+    font-size: 1.5rem;
+    margin-bottom: -0.3rem;
+  }
+  
+  header > h2 {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  nav li {
+    padding: 0.2rem 0rem;
+    font-size: 1.2rem;
+    display: inline;
+  }
+  
+  nav li a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  
+  nav a.active {
+    font-weight: bold;
+  }
+  
+  .nav-icon {
+    padding: 0.2rem;
+    height: 2rem;
+    width: 1.8rem;
+  }
+  
+  nav li a span {
+    border-left: 1px solid black;
+    padding-left: 0.6rem;
+    margin-top: 0.1rem;
+    color: black;
+  }
+  
+  section {
+    width: min(100%, 38rem);
+    background: white;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+  }
+  section + section {
+    margin-top: 1rem;
+  }
+  
+  h3 {
+    border-bottom: DarkSlateGray 1px solid;
+    margin-bottom: 1rem;
+  }
+  
+  pre {
+    padding-left: 0.2rem;
+    background: DarkSlateGray;
+    color: white;
+  }
+  
+
+
